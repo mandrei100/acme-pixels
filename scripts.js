@@ -62,6 +62,18 @@ addRow.addEventListener('click', ev => {
     //generateNxN(col,row);
 })
 
+addColumn.addEventListener('click', ev => {
+    //row++
+    const node = document.querySelector('#grid').lastElementChild;
+    const cloneNode = node.cloneNode(true);
+    [...cloneNode.children].forEach( ele => {
+        ele.style.backgroundColor = "";
+    })
+    document.querySelector('#grid').appendChild(cloneNode);
+    cells.document.querySelectorAll('.cells');
+
+    //generateNxN(col,row);
+})
 
     
 
