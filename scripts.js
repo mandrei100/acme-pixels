@@ -3,16 +3,15 @@ const render = (template, node) => {
 }
 
 const generateNxN = (n)=> {
-    let arr = [];
     for(let i = 0; i < n; i++){
-        
-        for(let j = 0; i < n; j++{
-            
-        }
+       render(`<div id="row-${i+1}"></div>`, document.querySelector('#grid'));
+       const row = document.querySelector(`#row-${i+1}`);
+       for(let j = 0; j < n; j++){
+        render(`<div class="something"></div>`, row);
+       }
     }
-return arr;
 };
-const arr = generateNxN(2);
+const arr = generateNxN(5);
     /* sample output
     [
       ['red', 'blue'],//row 1
@@ -34,4 +33,15 @@ const arr = generateNxN(2);
        <div style='background-color:'></div>
     </div>
     */
-console.log(arr)
+// const addRow = document.querySelector("#addRow");
+// const removeRow = document.querySelector("#removeRow");
+// const addColumn = document.querySelector("#addColumn");
+// const removeColumn = document.querySelector("#removeColumn");
+
+// const red = document.querySelector("#red");
+// const blue = document.querySelector("#blue");
+// const green = document.querySelector("#green");
+// const yellow = document.querySelector("#yellow");
+// const cyan = document.querySelector("#cyan");
+
+
